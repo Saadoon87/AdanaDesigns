@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --color-background: #fbf7f2;
+  --color-foreground: #2b2522;
+  --color-card: #fffdf9;
+  --color-card-foreground: #2b2522;
+  --color-popover: #fffdf9;
+  --color-popover-foreground: #2b2522;
+  --color-primary: #9f6b53;
+  --color-primary-foreground: #fffaf4;
+  --color-secondary: #ead8cf;
+  --color-secondary-foreground: #4a352e;
+  --color-muted: #f1e7df;
+  --color-muted-foreground: #7d6a61;
+  --color-accent: #d9b86f;
+  --color-accent-foreground: #32261d;
+  --color-destructive: #b84d4d;
+  --color-destructive-foreground: #fff7f5;
+  --color-border: #e6d8cd;
+  --color-input: #e6d8cd;
+  --color-ring: #9f6b53;
+  --color-sage: #6f8a74;
+  --color-blush: #e8c8c1;
+  --color-gold: #caa65a;
+  --radius: 0.75rem;
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.2);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(232, 200, 193, 0.38), transparent 34rem),
+    linear-gradient(180deg, #fbf7f2 0%, #f8efe8 100%);
+  color: var(--color-foreground);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
